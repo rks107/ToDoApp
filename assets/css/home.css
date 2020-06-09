@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 5px black;
+    color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    /* padding: 5px; */
+}
+
+#todo-heading {
+    padding: 7px;
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 10px auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+form input {
+    width: 99%;
+    border: none;
+    font-size: 1rem;
+    padding: 3px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    background-color: none;
+    font-weight: lighter;
+}
+
+#category-due-date {
+    display: flex;
+    justify-content: space-between;
+}
+#category {
+    width: 50%;
+    /* border: 1px solid rgba(0,0,0,0.5); */
+}
+select {
+    width: 100%;
+    border: none;
+}
+#due-date {
+    width: 50%;
+    /* border: 1px solid rgba(0,0,0,0.2); */
+}
+#due-date input {
+    width: 100%;
+}
+#add-delete-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 2px;
+    background-color: red;
+    color: white;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 1.5rem;
+    padding: 7px;
+    width: 145px;
+}
+
+#delete-button {
+    padding: 2px;
+    background-color: red;
+    color: white;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 1.5rem;
+    padding: 7px;
+    margin-left: 2px;
+    width: 145px;
+}
+
+button[type="submit"] {
+    background-color: green;
+    /* margin-right: 5px; */
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: none;
+}
+
+section {
+    padding: 5px;
+}
+
+/* For Displaying Task */
+.task{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.1);
+    margin-bottom: 2px;
+    padding: 5px;
+    overflow: hidden;
+}
+.task-select{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.task-name-and-category {
+    width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-name {
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    color: rgba(0,0,0,0.8);
+}
+.task-date {
+    color: rgba(0,0,0,0.4);
+}
+#task-category {
+    color: rgba(0,0,0,0.8);
+    letter-spacing: 0.5px;
+    margin-right: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 2px 4px;
+    width: 70px;
+    text-align: center;
+}
+a p:hover{
+    text-decoration: none;
+    
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        width: 80%;
+    }
+}
