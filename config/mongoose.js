@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 // coonect to the database
-mongoose.connect('mongodb://localhost/todo_list_db', { useUnifiedTopology: true , useNewUrlParser: true });
+mongoose.connect('mongodb+srv://rks107:rohit@cluster0-zcia7.mongodb.net/ToDoTasks?retryWrites=true&w=majority', { useUnifiedTopology: true , useNewUrlParser: true });
 
 // acquire the connection (to check if it is successful)
 const db = mongoose.connection;
