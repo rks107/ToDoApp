@@ -5,6 +5,7 @@ body {
     background-color: rgba(0,0,0,0.2);
 }
 
+/* TODO Container */
 .container {
     width: 50%;
     margin: 50px auto;
@@ -12,7 +13,6 @@ body {
     box-shadow: 0 0 5px black;
     color: rgba(0,0,0,0.5);
     overflow: hidden;
-    /* padding: 5px; */
 }
 
 #todo-heading {
@@ -23,6 +23,7 @@ body {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
+/* Form For Taking data of Tasks */
 form input {
     width: 99%;
     border: none;
@@ -40,7 +41,6 @@ form input {
 }
 #category {
     width: 50%;
-    /* border: 1px solid rgba(0,0,0,0.5); */
 }
 select {
     width: 100%;
@@ -48,7 +48,6 @@ select {
 }
 #due-date {
     width: 50%;
-    /* border: 1px solid rgba(0,0,0,0.2); */
 }
 #due-date input {
     width: 100%;
@@ -82,11 +81,6 @@ button{
 
 button[type="submit"] {
     background-color: green;
-    /* margin-right: 5px; */
-}
-
-li {
-    list-style: none;
 }
 
 input {
@@ -142,6 +136,7 @@ a p:hover{
     
 }
 
+/* Media Query For Small Screen Devices */
 @media screen and (max-width:800px) {
     .container{
         width: 80%;

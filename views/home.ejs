@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
+    <!-- TODO Container -->
     <div class="container">
         <h1 id="todo-heading"> 
             <i class="fa fa-tasks" aria-hidden="true"></i>
             My TODO Tasks 
         </h1>
 
+        <!-- Form For Insertion of Data -->
         <form action="/create_task" method="POST">
             <div class="form-group"> 
               <label for="task">DESRIPTION</label><br>
@@ -33,7 +35,7 @@
                             <option>Personal</option>
                             <option>Work</option>
                             <option>School</option>
-                            <option>Cleening</option>
+                            <option>Cleaning</option>
                             <option>Others</option>
                         </select>
             </div>
@@ -51,6 +53,8 @@
                 </button> 
             </div>
         </form>
+
+        <!-- Delete Task button -->
             <div id="delete-task" style="background-color: darkred;">
                 
                 <a href="/delete-task" style="text-decoration: none;">
@@ -62,6 +66,7 @@
             </div>
         </section>
         <hr>
+        <!-- Container for Displaying Tasks -->
         <div class="task-container"></div>
 
             <% if(task_list.length == 0){ %>
@@ -73,16 +78,16 @@
             <% for(let task of task_list){ %>
                 <% i++ %>
             <% if(task.select){ %>
-                
+                <!-- If Task Done -->
             <div class="task" style="background-color: rgba(0,0,0,0.3);">
                     <div class="task-select">
-                        <a href="/select-task/<%= i %>"> 
+                        <a href="/deselect-task/?id=<%= task._id %>&select=<%= task.select %>"> 
                             <i class="far fa-check-square" style="font-size: 2rem; color: darkblue;"></i>
                         </a>
                     </div>
                     <div class="task-name-and-category">
                         <div class="task-name-date">
-                            <a href="/select-task/<%= i %>" style="text-decoration: none;"> 
+                            <a href="/deselect-task/?id=<%= task._id %>&select=<%= task.select %>" style="text-decoration: none;"> 
                                 <p class="task-name" style="text-decoration:line-through;"> 
                                     <%= task.name %> 
                                 </p>
@@ -108,15 +113,16 @@
                     </div>
             </div>
             <% }else{ %> 
+                <!-- If Task Remaining -->
                 <div class="task">
                     <div class="task-select">
-                        <a href="/select-task/<%= i %>">
+                        <a href="/select-task/?id=<%= task._id %>&select=<%= task.select %>">
                             <i class="far fa-square" style="font-size: 2rem; color: white;"></i>
                         </a>
                     </div>
                     <div class="task-name-and-category">
                         <div class="task-name-date">
-                            <a href="/select-task/<%= i %>" style="text-decoration: none;">
+                            <a href="/select-task/?id=<%= task._id %>&select=<%= task.select %>" style="text-decoration: none;">
                                 <p class="task-name"> <%= task.name %> </p>
                             </a>
                             <p class="task-date">
@@ -150,8 +156,6 @@
         </div>
 
     </div>
-
-    <script src="/js/home.js"></script>
     
 </body>
 </html>
